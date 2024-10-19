@@ -40,7 +40,17 @@ export async function GET(request) {
 
 export async function POST(request) {
     const data = await request.json();
+    const obj = {
+        ...data,
+        isCompleted: false,
+        id: todos.length + 1
+    }
+
+    todos.push(obj);
     console.log(data);
 
-    return Response
+    return Response.json({
+        data: todos,
+        msg: "Todos Added Successfully"
+    })
 }
