@@ -1,3 +1,5 @@
+import { addTodos } from '@/actions/todos';
+import Form from '@/components/Form';
 import Link from 'next/link';
 import React from 'react'
 
@@ -14,16 +16,7 @@ const Todo = async () => {
             <h1 className=' text-3xl font-bold text-purple-800 text-center'>Todos Page</h1>
             <div className=' mx-[10%]'>
 
-                <div className=' relative flex mt-10'>
-                    <input
-                        placeholder=' Add Task'
-                        type='text'
-                        className=' border-2 border-purple-800 p-3 w-[100%] rounded-md outline-none'
-                    />
-                    <button className=' py-3 mt-[2px] px-6 bg-purple-600 rounded absolute right-[2.5px]'>
-                        Add Task
-                    </button>
-                </div>
+                <Form />
                 {
                     todo?.data?.map((todos) => (
 
