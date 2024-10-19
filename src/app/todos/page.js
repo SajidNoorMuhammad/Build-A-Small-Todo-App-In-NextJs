@@ -5,7 +5,7 @@ import React from 'react'
 
 const Todo = async () => {
 
-    let todo = await fetch('http://localhost:3000/api/todos', {
+    let todo = await fetch('https://build-a-small-todo-app-in-next-js.vercel.app/api/todos', {
         cache: "no-cache"
     });
     todo = await todo.json();
